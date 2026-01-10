@@ -1,0 +1,348 @@
+/* ========= GENERAL ========= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+.DJ-page-body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #f5f3ff 0, #f9fafb 40%, #ffffff 100%);
+  color: #111827;
+}
+
+
+.DJ-page-body {
+  padding-top: 80px; /* hapësirë për navbar fixed */
+}
+
+
+#DJ-home {
+  padding-top: 80px; /* për navbar fixed-top */
+
+}
+
+/* ========= NAVBAR ========= */
+.DJ-navbar {
+  background: linear-gradient(90deg, #020617, #111827);
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.6);
+}
+
+.DJ-logo {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.DJ-logo-mark {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, #a855f7, #6366f1);
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #f9fafb;
+}
+
+.DJ-nav-list .nav-link {
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.DJ-nav-list .nav-link.active {
+  position: relative;
+}
+
+.DJ-nav-list .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #a855f7, #22c55e);
+}
+
+/* ========= HERO ========= */
+.DJ-hero {
+  min-height: calc(100vh - 80px);
+  padding: 40px 0 80px;
+  background-image:
+    radial-gradient(circle at top left, rgba(129, 140, 248, 0.5), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(244, 114, 182, 0.4), transparent 50%);
+}
+
+.DJ-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+}
+
+.DJ-hero-title {
+  margin-top: 1.5rem;
+  font-size: clamp(2.3rem, 4.3vw, 3.4rem);
+  font-weight: 700;
+  color: #020617;
+}
+
+.DJ-hero-subtitle {
+  margin-top: 1rem;
+  font-size: 1.02rem;
+  max-width: 480px;
+  color: #4b5563;
+}
+
+.DJ-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.DJ-hero-stats h3 {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.DJ-hero-stats p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.DJ-hero-image-card {
+  position: relative;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.DJ-hero-image {
+  border-radius: 2rem;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.45);
+  object-fit: cover;
+  min-height: 260px;
+}
+
+.DJ-hero-floating-card {
+  position: absolute;
+  right: -8%;
+  bottom: 10%;
+  max-width: 230px;
+  padding: 0.85rem 1rem;
+  border-radius: 1.2rem;
+  background: rgba(15, 23, 42, 0.95);
+  color: #f9fafb;
+  font-size: 0.86rem;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.7);
+}
+
+.DJ-hero-floating-card span {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.78rem;
+  color: #d1d5db;
+}
+
+/* ========= BUTTONS ========= */
+.DJ-btn-primary {
+  border-radius: 999px;
+  padding-inline: 1.7rem;
+  font-weight: 600;
+}
+
+.DJ-btn-ghost {
+  border-radius: 999px;
+  border-width: 1px;
+}
+
+.DJ-btn-outline {
+  border-radius: 999px;
+  padding-inline: 1.6rem;
+  font-weight: 500;
+}
+
+/* ========= SECTIONS ========= */
+.DJ-section {
+  padding: 80px 0;
+}
+
+.DJ-section-title {
+  font-weight: 600;
+  font-size: 1.9rem;
+  color: #020617;
+}
+
+.DJ-section-subtitle {
+  color: #6b7280;
+  max-width: 540px;
+  margin-inline: auto;
+}
+
+/* ========= PRODUCT CARDS ========= */
+.DJ-product-card {
+  border: none;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  background: #ffffff;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.DJ-product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.2);
+}
+
+.DJ-product-card-featured {
+  border: 2px solid rgba(129, 140, 248, 0.7);
+}
+
+.DJ-product-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.DJ-product-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 230px;
+}
+
+.DJ-product-label {
+  position: absolute;
+  top: 12px;
+  left: 18px;        /* këtu e kontrollon sa djathtas të del teksti */
+  padding: 2px 11px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.DJ-price-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.8rem;
+}
+
+/* ========= “WHY” CARDS ========= */
+.DJ-gradient-card {
+  padding: 1.4rem 1.5rem;
+  border-radius: 1.4rem;
+  background: linear-gradient(135deg, rgba(129, 140, 248, 0.12), rgba(236, 72, 153, 0.12));
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.DJ-gradient-card h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* ========= TESTIMONIALS ========= */
+.DJ-testimonial-card {
+  padding: 1.7rem 1.8rem;
+  border-radius: 1.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.08);
+  font-size: 0.98rem;
+}
+
+.DJ-testimonial-card span {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* ========= FOOTER ========= */
+.DJ-footer {
+  padding: 1.6rem 0;
+  background: #020617;
+  color: #9ca3af;
+}
+
+.DJ-footer a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.DJ-footer a:hover {
+  text-decoration: underline;
+}
+
+.DJ-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ========= SCROLL REVEAL ========= */
+.DJ-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.DJ-reveal.DJ-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 991.98px) {
+  #DJ-home {
+    padding-top: 72px;
+  }
+
+  .DJ-hero {
+    padding-top: 30px;
+  }
+
+  .DJ-hero-floating-card {
+    right: 4%;
+    bottom: 6%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .DJ-section {
+    padding: 60px 0;
+  }
+
+  .DJ-hero-title {
+    font-size: 2.1rem;
+  }
+
+  .DJ-hero-floating-card {
+    max-width: 200px;
+    font-size: 0.8rem;
+  }
+}
